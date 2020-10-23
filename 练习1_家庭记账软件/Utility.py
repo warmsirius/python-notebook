@@ -39,7 +39,7 @@ class Utility(object):
         return n
 
     @classmethod
-    def read_str(cls) -> str:
+    def read_reason(cls) -> str:
         """用于收入和支出说明的输入。该方法从键盘中读取一个不超过8位数长度的字符串，并将其作为方法的返回值。"""
         string = cls.read_keyboard(8)
         return string

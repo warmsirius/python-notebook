@@ -35,7 +35,7 @@ class FamilyAccount(object):
                 income = Utility.read_num()
                 balance += income
                 print("请输入收入来源:")
-                income_reason = Utility.read_str()
+                income_reason = Utility.read_reason()
                 account_detail += f"收入\t{balance}\t{income}\t{income_reason}\n"
                 print("------------登记完成-------------")
 
@@ -47,7 +47,7 @@ class FamilyAccount(object):
                 if balance >= outcome:
                     balance -= outcome
                     print("请输入支出理由:")
-                    outcome_reason = Utility.read_str()
+                    outcome_reason = Utility.read_reason()
                     account_detail += f"支出\t{balance}\t{outcome}\t{outcome_reason}\n"
                 else:
                     print("支出超出账户额度，支付失败!")
