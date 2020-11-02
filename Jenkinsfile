@@ -7,14 +7,12 @@ pipeline {
             }
         }
         stage("Test"){
-
-             withPythonEnv("System-Cpython-3") {
-                sh "pip3 install -r ./requirements.txt"
-                // 进入该环境
-                sh "source .pyenv-System-CPython-3/bin/activate"
-             }
-
-             steps {
+            steps {
+                withPythonEnv("System-Cpython-3") {
+                    sh "pip3 install -r ./requirements.txt"
+                    // 进入该环境
+                    sh "source .pyenv-System-CPython-3/bin/activate"
+                }
                 sh "pytest --cov=."
                 echo "完成测试..."
              }
