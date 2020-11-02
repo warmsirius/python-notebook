@@ -8,7 +8,7 @@ pipeline {
         }
         stage("Test"){
             steps {
-                withPythonEnv("System-Cpython-3") {
+                withPythonEnv("System-CPython-3") {
                     sh "pip3 install -r ./requirements.txt"
                     // 进入该环境
                     sh "source .pyenv-System-CPython-3/bin/activate"
