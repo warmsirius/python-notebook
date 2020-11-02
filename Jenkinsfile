@@ -13,6 +13,10 @@ pipeline {
                     // 进入该环境
                     sh "source .pyenv-System-CPython-3/bin/activate"
                     sh "pytest -vv testfile.py"
+                    // 退出虚拟环境
+                    sh "deactivate"
+                    // 删除虚拟环境
+                    sh "rm -rf .pyenv-System-CPython-3"
                 }
 
                 echo "完成测试..."
