@@ -78,3 +78,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # 终端执行命令
+    # python 2._filecmp.dircmp校验源与备份目录差异.py /Users/yuanjun/Documents/priv_repo/python-notebook/2.Python运维/2.业务服务监控/dir1 /Users/yuanjun/Documhon-notebook/2.Python运维/2.业务服务监控/dir3
