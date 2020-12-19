@@ -28,7 +28,6 @@ def compareme(dir1, dir2):
 
 
 def main():
-    import pdb; pdb.set_trace()
     if len(sys.argv) > 2:
         dir1 = sys.argv[1]
         dir2 = sys.argv[2]
@@ -59,7 +58,6 @@ def main():
     # 重新调用compareme函数，重新遍历新创建目录的内容
     if createdir_bool:
         destination_files = []
-        source_files = []
         source_files = compareme(dir1, dir2)
 
         # 获取源目录差异路径清单，对应替换成备份目录
