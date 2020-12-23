@@ -2,6 +2,18 @@ import os, sys
 
 import pycurl
 
+"""
+HTTP服务是最流行的互联网应用之一，服务质量的好坏关系到用户体验以及网站的运营服务水平，最常用的有两个标准
+
+1、服务的可用性，比如是否处于正常提供服务状态，而不是出现404页面未找到或500页面错误等
+2、服务的响应速度，比如静态类文件下载时间都控制在毫秒级，动态CGI为秒级。
+
+本示例使用 pycurl 的 setopt 与 getinfo 方法实现HTTP服务质量的探测。
+1、获取监控URL返回的HTTP状态码，HTTP状态码采用pycurl.HTTP_CODE常量得到
+2、HTTP请求到完成下载期间各环节的响应时间，通过pycurl.NAMELOOKUP_TIME、pycurl.CONNECT_TIME、pycurl.PRETRANSFER_TIME、pycurl.R等常量来实现。
+3、通过pycurl.WRITEHEADER、pycurl.WRITEDATA常量得到目标URL的HTTP响应头部及页面内容
+"""
+
 URL = "https://www.baidu.com"  # 探测的目标URL
 
 c = pycurl.Curl()  # 创建一个Curl对象
