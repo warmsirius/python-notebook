@@ -13,7 +13,7 @@ import smtplib
 
 HOST = ("smtp.163.com")
 SUBJECT = "Test email from Python-notebook"
-TO = ["861022418@qq.com", "2859626066@qq.com"]
+TO = ["17610291226@163.com", "861022418@qq.com", "2859626066@qq.com"]
 FROM = "17610291226@163.com"
 
 
